@@ -209,16 +209,17 @@ func (me *MainApp) SimpleCheckParameters() {
 	}
 
 	help := false
-	env := "test"
+	// env := "test"
 	for _, para := range me.Paras {
 		if para.Name == "h" {
 			help = *(para.Value.(*bool))
-		} else if para.Name == "env" {
-			env = *(para.Value.(*string))
 		}
+		// } else if para.Name == "env" {
+		// 	env = *(para.Value.(*string))
+		// }
 	}
 
-	log.Printf("Run Environment:[%v]", env)
+	// log.Printf("Run Environment:[%v]", env)
 
 	if help {
 		me.PrintUsage()
